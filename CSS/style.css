@@ -1,0 +1,1133 @@
+/* general */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none !important;
+  outline: none !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+i {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --main-color: #343434;
+  --font-weight: 800;
+  --font-weight-xl: 900;
+  --second-color: #748182;
+  --color-white: #ffffff;
+  --back-ground: #f7f7f7;
+  --transition-time: 0.4s;
+  --body-color: #5b5b5b;
+}
+
+html {
+  scroll-padding-top: 3.875rem;
+  scroll-behavior: smooth;
+}
+
+/* titles */
+.title h2 {
+  color: var(--main-color);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-xl);
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  z-index: 0;
+}
+
+.title h2::after {
+  content: "";
+  background-image: url(IMG/dots.png);
+  width: 100%;
+  height: 75%;
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -0.3125rem;
+  left: 0;
+  z-index: -1;
+}
+
+/* navbar */
+.navbar {
+  padding-block: 0.1875rem;
+}
+
+.navbar-nav .active {
+  position: relative;
+}
+
+.navbar-nav .active::after {
+  content: "";
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.125rem;
+  width: 0;
+  -webkit-animation: activeAnimation 0.5s forwards ease;
+  animation: activeAnimation 0.5s forwards ease;
+  background-color: var(--main-color);
+  -webkit-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+@-webkit-keyframes activeAnimation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes activeAnimation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* home */
+.home {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(IMG/bg.jpg);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(IMG/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(IMG/bg.jpg);
+  background-size: cover;
+}
+
+.home h1 {
+  font-size: 3.75rem;
+  text-wrap: nowrap;
+}
+
+@media screen and (max-width: 988px) {
+  .home h1 {
+    font-size: 2.5rem;
+    text-wrap: nowrap;
+  }
+}
+
+.home h1:after {
+  content: "|";
+  -webkit-animation-name: typing;
+  animation-name: typing;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes typing {
+  0% {
+    content: "|";
+  }
+  1% {
+    content: "|";
+  }
+  2% {
+    content: "L|";
+  }
+  3% {
+    content: "La|";
+  }
+  4% {
+    content: "Lar|";
+  }
+  5% {
+    content: "Larr|";
+  }
+  6% {
+    content: "Larry|";
+  }
+  7% {
+    content: "Larry |";
+  }
+  8% {
+    content: "Larry D|";
+  }
+  9% {
+    content: "Larry Da|";
+  }
+  10% {
+    content: "Larry Dan|";
+  }
+  11% {
+    content: "Larry Dani|";
+  }
+  12% {
+    content: "Larry Danie|";
+  }
+  13% {
+    content: "Larry Daniel|";
+  }
+  14% {
+    content: "Larry Daniels|";
+  }
+  15% {
+    content: "Larry Daniels|";
+  }
+  16% {
+    content: "Larry Daniels|";
+  }
+  17% {
+    content: "Larry Daniels|";
+  }
+  18% {
+    content: "Larry Daniels|";
+  }
+  19% {
+    content: "Larry Daniels|";
+  }
+  20% {
+    content: "Larry Daniels|";
+  }
+  21% {
+    content: "Larry Daniels|";
+  }
+  22% {
+    content: "Larry Daniels|";
+  }
+  23% {
+    content: "Larry Daniels|";
+  }
+  24% {
+    content: "Larry Daniels|";
+  }
+  25% {
+    content: "Larry Daniel|";
+  }
+  26% {
+    content: "Larry Danie|";
+  }
+  27% {
+    content: "Larry Dani|";
+  }
+  28% {
+    content: "Larry Dan|";
+  }
+  29% {
+    content: "Larry Da|";
+  }
+  30% {
+    content: "Larry D|";
+  }
+  31% {
+    content: "Larry |";
+  }
+  32% {
+    content: "Larry|";
+  }
+  33% {
+    content: "Larr|";
+  }
+  34% {
+    content: "Larr|";
+  }
+  35% {
+    content: "Lar|";
+  }
+  36% {
+    content: "La|";
+  }
+  37% {
+    content: "L|";
+  }
+  38% {
+    content: "|";
+  }
+  39% {
+    content: "|";
+  }
+  40% {
+    content: "|";
+  }
+  41% {
+    content: "D|";
+  }
+  42% {
+    content: "De|";
+  }
+  43% {
+    content: "Dev|";
+  }
+  45% {
+    content: "Deve|";
+  }
+  46% {
+    content: "Devel|";
+  }
+  47% {
+    content: "Develo|";
+  }
+  48% {
+    content: "Develop|";
+  }
+  49% {
+    content: "Develope|";
+  }
+  50% {
+    content: "Developer|";
+  }
+  51% {
+    content: "Developer|";
+  }
+  52% {
+    content: "Developer|";
+  }
+  53% {
+    content: "Developer|";
+  }
+  54% {
+    content: "Developer|";
+  }
+  55% {
+    content: "Developer|";
+  }
+  56% {
+    content: "Developer|";
+  }
+  57% {
+    content: "Developer|";
+  }
+  58% {
+    content: "Developer|";
+  }
+  59% {
+    content: "Developer|";
+  }
+  60% {
+    content: "Developer|";
+  }
+  61% {
+    content: "Develope|";
+  }
+  62% {
+    content: "Develop|";
+  }
+  63% {
+    content: "Develo|";
+  }
+  64% {
+    content: "Devel|";
+  }
+  65% {
+    content: "Deve|";
+  }
+  66% {
+    content: "Dev|";
+  }
+  67% {
+    content: "De|";
+  }
+  68% {
+    content: "D|";
+  }
+  69% {
+    content: "|";
+  }
+  70% {
+    content: "|";
+  }
+  71% {
+    content: "|";
+  }
+  72% {
+    content: "D|";
+  }
+  73% {
+    content: "De|";
+  }
+  74% {
+    content: "Des|";
+  }
+  75% {
+    content: "Desi|";
+  }
+  76% {
+    content: "Desig|";
+  }
+  77% {
+    content: "Design|";
+  }
+  78% {
+    content: "Designe|";
+  }
+  79% {
+    content: "Designer|";
+  }
+  80% {
+    content: "Designer|";
+  }
+  81% {
+    content: "Designer|";
+  }
+  82% {
+    content: "Designer|";
+  }
+  83% {
+    content: "Designer|";
+  }
+  84% {
+    content: "Designer|";
+  }
+  85% {
+    content: "Designer|";
+  }
+  86% {
+    content: "Designer|";
+  }
+  87% {
+    content: "Designer|";
+  }
+  88% {
+    content: "Designer|";
+  }
+  89% {
+    content: "Designer|";
+  }
+  90% {
+    content: "Designe|";
+  }
+  91% {
+    content: "Design|";
+  }
+  92% {
+    content: "Desig|";
+  }
+  93% {
+    content: "Desi|";
+  }
+  94% {
+    content: "Des|";
+  }
+  95% {
+    content: "De|";
+  }
+  96% {
+    content: "D|";
+  }
+  97% {
+    content: "|";
+  }
+  98% {
+    content: "|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+@keyframes typing {
+  0% {
+    content: "|";
+  }
+  1% {
+    content: "|";
+  }
+  2% {
+    content: "L|";
+  }
+  3% {
+    content: "La|";
+  }
+  4% {
+    content: "Lar|";
+  }
+  5% {
+    content: "Larr|";
+  }
+  6% {
+    content: "Larry|";
+  }
+  7% {
+    content: "Larry |";
+  }
+  8% {
+    content: "Larry D|";
+  }
+  9% {
+    content: "Larry Da|";
+  }
+  10% {
+    content: "Larry Dan|";
+  }
+  11% {
+    content: "Larry Dani|";
+  }
+  12% {
+    content: "Larry Danie|";
+  }
+  13% {
+    content: "Larry Daniel|";
+  }
+  14% {
+    content: "Larry Daniels|";
+  }
+  15% {
+    content: "Larry Daniels|";
+  }
+  16% {
+    content: "Larry Daniels|";
+  }
+  17% {
+    content: "Larry Daniels|";
+  }
+  18% {
+    content: "Larry Daniels|";
+  }
+  19% {
+    content: "Larry Daniels|";
+  }
+  20% {
+    content: "Larry Daniels|";
+  }
+  21% {
+    content: "Larry Daniels|";
+  }
+  22% {
+    content: "Larry Daniels|";
+  }
+  23% {
+    content: "Larry Daniels|";
+  }
+  24% {
+    content: "Larry Daniels|";
+  }
+  25% {
+    content: "Larry Daniel|";
+  }
+  26% {
+    content: "Larry Danie|";
+  }
+  27% {
+    content: "Larry Dani|";
+  }
+  28% {
+    content: "Larry Dan|";
+  }
+  29% {
+    content: "Larry Da|";
+  }
+  30% {
+    content: "Larry D|";
+  }
+  31% {
+    content: "Larry |";
+  }
+  32% {
+    content: "Larry|";
+  }
+  33% {
+    content: "Larr|";
+  }
+  34% {
+    content: "Larr|";
+  }
+  35% {
+    content: "Lar|";
+  }
+  36% {
+    content: "La|";
+  }
+  37% {
+    content: "L|";
+  }
+  38% {
+    content: "|";
+  }
+  39% {
+    content: "|";
+  }
+  40% {
+    content: "|";
+  }
+  41% {
+    content: "D|";
+  }
+  42% {
+    content: "De|";
+  }
+  43% {
+    content: "Dev|";
+  }
+  45% {
+    content: "Deve|";
+  }
+  46% {
+    content: "Devel|";
+  }
+  47% {
+    content: "Develo|";
+  }
+  48% {
+    content: "Develop|";
+  }
+  49% {
+    content: "Develope|";
+  }
+  50% {
+    content: "Developer|";
+  }
+  51% {
+    content: "Developer|";
+  }
+  52% {
+    content: "Developer|";
+  }
+  53% {
+    content: "Developer|";
+  }
+  54% {
+    content: "Developer|";
+  }
+  55% {
+    content: "Developer|";
+  }
+  56% {
+    content: "Developer|";
+  }
+  57% {
+    content: "Developer|";
+  }
+  58% {
+    content: "Developer|";
+  }
+  59% {
+    content: "Developer|";
+  }
+  60% {
+    content: "Developer|";
+  }
+  61% {
+    content: "Develope|";
+  }
+  62% {
+    content: "Develop|";
+  }
+  63% {
+    content: "Develo|";
+  }
+  64% {
+    content: "Devel|";
+  }
+  65% {
+    content: "Deve|";
+  }
+  66% {
+    content: "Dev|";
+  }
+  67% {
+    content: "De|";
+  }
+  68% {
+    content: "D|";
+  }
+  69% {
+    content: "|";
+  }
+  70% {
+    content: "|";
+  }
+  71% {
+    content: "|";
+  }
+  72% {
+    content: "D|";
+  }
+  73% {
+    content: "De|";
+  }
+  74% {
+    content: "Des|";
+  }
+  75% {
+    content: "Desi|";
+  }
+  76% {
+    content: "Desig|";
+  }
+  77% {
+    content: "Design|";
+  }
+  78% {
+    content: "Designe|";
+  }
+  79% {
+    content: "Designer|";
+  }
+  80% {
+    content: "Designer|";
+  }
+  81% {
+    content: "Designer|";
+  }
+  82% {
+    content: "Designer|";
+  }
+  83% {
+    content: "Designer|";
+  }
+  84% {
+    content: "Designer|";
+  }
+  85% {
+    content: "Designer|";
+  }
+  86% {
+    content: "Designer|";
+  }
+  87% {
+    content: "Designer|";
+  }
+  88% {
+    content: "Designer|";
+  }
+  89% {
+    content: "Designer|";
+  }
+  90% {
+    content: "Designe|";
+  }
+  91% {
+    content: "Design|";
+  }
+  92% {
+    content: "Desig|";
+  }
+  93% {
+    content: "Desi|";
+  }
+  94% {
+    content: "Des|";
+  }
+  95% {
+    content: "De|";
+  }
+  96% {
+    content: "D|";
+  }
+  97% {
+    content: "|";
+  }
+  98% {
+    content: "|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+.home h5 {
+  font-size: 3.125rem;
+  font-weight: var(--font-weight);
+}
+
+.home-icon {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #000b12;
+  border-radius: 50%;
+  margin-inline: 0.1875rem;
+}
+
+.home-icon a {
+  color: var(--color-white);
+}
+
+/* about_me */
+.about_me_img {
+  position: relative;
+}
+
+.about_me .backgroundDots {
+  background-image: url("IMG/dots.png");
+  width: 75%;
+  height: 75%;
+  background-repeat: repeat;
+  z-index: -1;
+  position: absolute;
+  bottom: -1.875rem;
+  left: 2.5rem;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+@media screen and (max-width: 988px) {
+  .about_me_img img {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .backgroundDots {
+    display: none;
+  }
+}
+
+.about_me_content h3 {
+  color: var(--main-color);
+  font-weight: var(--font-weight);
+  font-size: 1.875rem;
+}
+
+.about_me_content p,
+.about_me_content span {
+  color: var(--second-color);
+}
+
+.about_me_content span:nth-child(1) {
+  letter-spacing: 0.125rem;
+  font-size: 0.875rem;
+}
+
+.progress {
+  height: 1.5rem;
+  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  background: var(--back-ground);
+}
+
+.progress-bar {
+  background-color: var(--main-color);
+}
+
+.progress span {
+  color: var(--color-white);
+}
+
+.about_me_content .btn-dark {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.about_me_content .btn-dark:hover {
+  background-color: var(--color-white);
+  color: var(--main-color);
+}
+
+/* services */
+.services {
+  background-color: var(--back-ground);
+}
+
+.card-icon i {
+  background-color: var(--back-ground);
+  padding: 1.875rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 2.5rem;
+}
+
+.card:hover i {
+  background-color: var(--main-color);
+  color: var(--color-white);
+}
+
+.card {
+  border: unset;
+}
+
+.card-body h5 {
+  font-size: 1.125rem;
+  color: var(--main-color);
+}
+
+.card-body p {
+  color: var(--second-color);
+}
+
+/* portfolio */
+.nav-link {
+  color: var(--main-color);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: unset;
+}
+
+.nav-underline .nav-link.active,
+.nav-underline .show > .nav-link {
+  font-weight: unset;
+  color: unset;
+}
+
+.nav-underline .nav-link:hover:not(.nav-link.active) {
+  border: unset;
+}
+
+.portfolio-img {
+  position: relative;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 97%;
+  height: 97%;
+  margin: auto;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+.layer:hover,
+.layer:hover h6,
+.layer:hover .portfolio-icon i {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.layer h6 {
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.portfolio-icon i {
+  background-color: var(--main-color);
+  color: var(--color-white);
+  padding: 0.5rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  border: var(--color-white) 0.125rem solid;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.portfolio-icon .icon1:hover i,
+.portfolio-icon .icon2:hover i {
+  background-color: var(--back-ground);
+  border: var(--main-color) 0.125rem solid;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.portfolio-icon a {
+  color: var(--color-white);
+}
+
+/* testimonials */
+.testimonials {
+  background-color: var(--back-ground);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: var(--second-color);
+}
+
+.carousel-indicators {
+  margin-bottom: unset;
+}
+
+.testimonials p,
+.testimonials span {
+  color: var(--second-color);
+}
+
+.testimonials span {
+  font-size: 0.75rem;
+}
+
+/* numbers */
+.numbers i {
+  font-size: 2rem;
+}
+
+.numbers span {
+  font-size: 2rem;
+}
+
+.numbers p {
+  color: var(--second-color);
+}
+
+/* team */
+.team {
+  background-color: var(--back-ground);
+}
+
+.caption {
+  background-color: var(--body-color);
+}
+
+.team-content-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 97%;
+  height: 97%;
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+  scale: 0.5;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.team-content:hover .team-content-layer {
+  opacity: 1;
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  scale: 1;
+}
+
+.team-all {
+  overflow: hidden;
+}
+
+.team-content-img {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.team-all:hover .team-content-img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.team-content-layer i {
+  font-size: 1.25rem;
+}
+
+.team-icon a {
+  background-color: var(--main-color);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: var(--main-color) 2px solid;
+}
+
+.team-icon a {
+  color: var(--color-white);
+}
+
+.team-icon a:hover {
+  background-color: var(--color-white);
+}
+
+.team-icon a:hover {
+  color: var(--main-color);
+}
+
+/* contact  */
+.contact p {
+  color: var(--second-color);
+}
+
+.contact-icon i {
+  background-color: var(--back-ground);
+  padding: 1.5625rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 2rem;
+}
+
+.contact-icon:hover i {
+  background-color: var(--main-color);
+  color: var(--color-white);
+}
+
+.form-control {
+  border: unset;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  border-color: unset;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-main {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--main-color);
+  color: var(--color-white);
+  border: 0.125rem solid var(--main-color);
+}
+
+.contact .btn:hover {
+  background-color: var(--color-white);
+  color: var(--main-color);
+  border: 0.125rem solid var(--main-color);
+}
+
+/* footer */
+footer {
+  background-color: var(--main-color);
+}
+
+footer p {
+  color: var(--second-color);
+  font-size: 0.8125rem;
+  margin: auto;
+}
